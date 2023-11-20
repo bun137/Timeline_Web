@@ -1,6 +1,3 @@
-export default function Home(){
-    return (
-      <main className="p-4">
-        home page!!
-      </main> 
-    )}
+export default function Home() {
+  return <main className="p-4">home page!!</main>;
+}

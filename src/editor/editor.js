@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import EditorJS from "@editorjs/editorjs";
-import { EDITOR_TOOLS } from "./editorTools";
-import "./editor.css";
+import React, { useEffect, useRef } from 'react';
+import EditorJS from '@editorjs/editorjs';
+import { EDITOR_TOOLS } from './editorTools';
+import './editor.css';
 
 export default function Editor({ data, onChange, holder }) {
   //add a reference to editor
@@ -32,6 +32,9 @@ export default function Editor({ data, onChange, holder }) {
   }, []);
 
   return (
-    <div id={holder} className="prose min-w-full rounded-lg m-3 p-5 bg-[#2B2B2B]" />
+    <div
+      id={holder}
+      className="prose min-w-full rounded-lg m-3 p-5 bg-[#2B2B2B]"
+    />
   );
 }

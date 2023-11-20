@@ -1,12 +1,12 @@
-"use client";
-import { useContext, createContext, useEffect, useState } from "react";
+'use client';
+import { useContext, createContext, useEffect, useState } from 'react';
 import {
   signInWithPopup,
   signOut,
   onAuthStateChanged,
   GoogleAuthProvider,
-} from "firebase/auth";
-import { auth } from "../firebase.js";
+} from 'firebase/auth';
+import { auth } from '../firebase.js';
 
 const AuthContext = createContext();
 
@@ -36,6 +36,6 @@ export const AuthContextProvider = ({ children }) => {
   );
 };
 
-export function UserAuth(){
+export function UserAuth() {
   return useContext(AuthContext);
-};
+}
