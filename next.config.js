@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {};
-module.exports = {
+const { default: next } = require('next');
+
+const nextConfig = {
+  async rewrites(){
+    return [
+      {
+        source:"/api/backendii/:path*",
+        destination:"http://localhost:5000/:path*"
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
@@ -19,3 +28,6 @@ module.exports = {
     ],
   },
 };
+
+
+module.exports = nextConfig;
