@@ -26,7 +26,7 @@ export default function editingPage() {
  const [clickedFeelings, setClickedFeelings] = useState(new Set());
  return (
    <>
-     <div className="grid grid-rows justify-center">
+     <div className="justify-center">
        <SideThreeLinks clickedFeelings={clickedFeelings} setClickedFeelings={setClickedFeelings}/>
        <Editor holder="editorsname" data={data} onChange={setData} />
        
@@ -35,7 +35,7 @@ export default function editingPage() {
                 <p className='m-3 p-2 border border-[#B3B3B3] rounded-3xl ' key={index}>{feeling}</p>
           ))}
        </div>
-       <button onClick={() => savingData(data)} disabled={!data}>Submit!</button>
+       <div className=' flex justify-center items-center'><button onClick={() => savingData(data)} disabled={!data} className=' m-3 p-2 hover:border hover:border-spacing-2 hover:border-[#b6b4b4] hover:rounded-xl '>Submit!</button></div>
      </div>
    </>
  );

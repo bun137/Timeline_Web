@@ -34,7 +34,7 @@ export default function Editor({ data, onChange, holder }) {
   return (
     <div
       id={holder}
-      className="prose min-w-full rounded-lg m-3 p-5 bg-[#2B2B2B]"
+      className="prose flex min-w-full justify-center items-center m-3 bg-[#2B2B2B]"
     />
   );
 }
