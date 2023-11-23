@@ -48,11 +48,18 @@ export default function Navbar() {
             <Link href="/about">About</Link>
           </li>
           {user && (
+            <>
             <li className="flex justify-between items-center">
               <Link href="../editingPage">
                 Editing Page
               </Link>
             </li>
+            <li className="flex justify-between items-center">
+              <Link href="../displayPage">
+                Previously written thoughts!
+              </Link>
+            </li>
+            </>
           )}
 
           <li>

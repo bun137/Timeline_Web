@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 const SideThreeLinks = ({clickedFeelings, setClickedFeelings}) => {
   const feelings = [
