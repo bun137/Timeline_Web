@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from "firebase/analytics";
 import { getAuth } from 'firebase/auth';
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,
@@ -11,6 +12,9 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_APP_ID,
   measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
 };
+
 const app = initializeApp(firebaseConfig);
 // export const analytics = getAnalytics(app);
+export const storage = getStorage(app);
 export const auth = getAuth(app);
+auth.useDeviceLanguage();

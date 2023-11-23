@@ -54,7 +54,7 @@ const SideThreeLinks = ({clickedFeelings, setClickedFeelings}) => {
       <div className="wrapper bg-[#1D1D1E] rounded-xl ">
         <div className="links flex justify-center items-center">
           <div className="text-[#FFFFFF] text-2xl p-2 m-3">+ Add Feelings</div>
-          <div className="text-[#FFFFFF] text-2xl p-2 m-3 ">+ Add Notes</div>
+          <div className="text-[#FFFFFF] text-2xl p-2 m-3 ">+ Add Pictures</div>
         </div>
         <div
           style={{
