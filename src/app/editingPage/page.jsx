@@ -1,5 +1,4 @@
 'use client';
-
 import SideThreeLinks from '@/app/components/sideThreeLinks';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
@@ -20,16 +19,22 @@ function savingData(data){
     "Content-Type": "application/json",
   }
  }).catch(e => console.log(e));
-
 }
 
 export default function editingPage() {
  const [data, setData] = useState();
+ const [clickedFeelings, setClickedFeelings] = useState(new Set());
  return (
    <>
      <div className="grid grid-rows justify-center">
-       <SideThreeLinks />
-       <Editor holder="editorsnameig" data={data} onChange={setData} />
+       <SideThreeLinks clickedFeelings={clickedFeelings} setClickedFeelings={setClickedFeelings}/>
+       <Editor holder="editorsname" data={data} onChange={setData} />
+       
+       <div className='flex justify-center items-center'>
+         {[...clickedFeelings].map((feeling, index) => (
+                <p className='m-3 p-2 border border-[#B3B3B3] rounded-3xl ' key={index}>{feeling}</p>
+          ))}
+       </div>
        <button onClick={() => savingData(data)} disabled={!data}>Submit!</button>
      </div>
    </>
