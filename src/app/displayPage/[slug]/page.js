@@ -41,7 +41,7 @@ export default function PrevStuff({ params }) {
 
   return (
     <>
-      <div className="flex justify-start ">
+      <div className="flex flex-col justify-start ">
         <div className=" text-2xl m-3 p-2">
           Thoughts Saved =&gt;
         </div>
