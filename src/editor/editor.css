@@ -4,27 +4,27 @@
 .ce-toolbar__plus,
 .ce-toolbar__settings-btn,
 .ce-popover__search {
-  background-color: rgb(38,38,38);
+  background-color: rgb(38, 38, 38);
   color: white;
 }
 
-#editorjs-container{
+#editorjs-container {
   display: flex;
-  justify-content:end;
+  justify-content: end;
   background: transparent;
   margin: 0;
 }
-.codex-editor{
-  background-color: rgb(38,38,38);
+.codex-editor {
+  background-color: rgb(38, 38, 38);
   width: 80vw;
   border-radius: 15px 15px 15px 15px;
   padding-top: 50px;
 }
 
-.ce-header{
+.ce-header {
   margin-bottom: 10px;
 }
-.ce-paragraph.cdx-block{
+.ce-paragraph.cdx-block {
   display: flex;
   padding-top: 2px;
   padding-bottom: 2px;

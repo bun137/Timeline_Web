@@ -1,5 +1,4 @@
-
-const SideThreeLinks = ({clickedFeelings, setClickedFeelings}) => {
+const SideThreeLinks = ({ clickedFeelings, setClickedFeelings }) => {
   const feelings = [
     'Happy',
     'Sad',
@@ -39,15 +38,12 @@ const SideThreeLinks = ({clickedFeelings, setClickedFeelings}) => {
     return '#' + Math.floor(Math.random() * 16777215).toString(16);
   });
 
+  const handleClick = (feeling) => {
+    setClickedFeelings((prevClickedFeelings) => {
+      return new Set([...clickedFeelings, feeling]);
+    });
+  };
 
-
- const handleClick = (feeling) => {
-  
-   setClickedFeelings((prevClickedFeelings)=>{
-    return new Set([...clickedFeelings,feeling])
-   });
- };
-  
   return (
     <div>
       <div className="wrapper bg-[#1D1D1E] rounded-xl ">
@@ -64,15 +60,15 @@ const SideThreeLinks = ({clickedFeelings, setClickedFeelings}) => {
         >
           {feelings.map((feeling, index) => (
             <>
-            <div
-              key={feeling}
-              className="feelingss grid grid-col justify-center items-center border-2 border-[#B3B3B3] rounded-3xl m-3 p-2"
-              style={{ backgroundColor: colors[index] }}
-              onClick={() => handleClick(feeling)}
-            >
-              {feeling}
-            </div>
-          </>
+              <div
+                key={feeling}
+                className="feelingss grid grid-col justify-center items-center border-2 border-[#B3B3B3] rounded-3xl m-3 p-2"
+                style={{ backgroundColor: colors[index] }}
+                onClick={() => handleClick(feeling)}
+              >
+                {feeling}
+              </div>
+            </>
           ))}
         </div>
       </div>

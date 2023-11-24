@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from "firebase/analytics";
 import { getAuth } from 'firebase/auth';
-import { getStorage } from "firebase/storage";
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,

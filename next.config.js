@@ -3,11 +3,11 @@
 const { default: next } = require('next');
 
 const nextConfig = {
-  async rewrites(){
+  async rewrites() {
     return [
       {
-        source:"/api/backendii/:path*",
-        destination:"https://timeline-backendii.vercel.app/:path*"
+        source: '/api/backendii/:path*',
+        destination: 'https://timeline-backendii.vercel.app/:path*',
       },
     ];
   },
@@ -28,6 +28,5 @@ const nextConfig = {
     ],
   },
 };
-
 
 module.exports = nextConfig;
