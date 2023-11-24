@@ -7,7 +7,7 @@ const nextConfig = {
     return [
       {
         source:"/api/backendii/:path*",
-        destination:"http://localhost:5000/:path*"
+        destination:"https://timeline-backendii.vercel.app/:path*"
       },
     ];
   },
