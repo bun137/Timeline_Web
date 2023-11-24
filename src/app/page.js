@@ -1,3 +1,9 @@
+"use client"
+import Timeline from "./components/timeline"
 export default function Home() {
-  return <main className="p-4">home page!!</main>;
+  return (<div>
+    <Timeline/>
+    <div classname="p-4">home page!!;
+    </div>
+  </div>)
 }
