@@ -1,4 +1,7 @@
+import { useState, useEffect } from "react";
+
 const SideThreeLinks = ({ clickedFeelings, setClickedFeelings }) => {
+  const [colors, setColors] = useState([]);
   const feelings = [
     'Happy',
     'Sad',
@@ -34,9 +37,11 @@ const SideThreeLinks = ({ clickedFeelings, setClickedFeelings }) => {
     'Tired',
     'Worried',
   ];
-  const colors = feelings.map(() => {
-    return '#' + Math.floor(Math.random() * 16777215).toString(16);
-  });
+  useEffect(() => {
+    const colors = feelings.map(() => {
+      return '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }); setColors(colors);
+  }, [])
 
   const handleClick = (feeling) => {
     setClickedFeelings((prevClickedFeelings) => {
